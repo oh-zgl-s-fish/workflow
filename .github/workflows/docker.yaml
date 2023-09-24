@@ -11,7 +11,8 @@ jobs:
     - name: Install dependencies
       run: pip install requests
     - name: get url
-      env: DOCKERTOKEN: ${{ secrets.docker_token }}
+      env: 
+        DOCKERTOKEN: ${{ secrets.docker_token }}
       run: python koishi.py > docker/koishi
     - name: Commit
       run: |
