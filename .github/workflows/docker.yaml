@@ -1,9 +1,10 @@
 name: Get Koishi push date
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 0 * * *'
 jobs:
-  build-:
+  build:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
