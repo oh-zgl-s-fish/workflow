@@ -11,13 +11,13 @@ jobs:
       uses: actions/checkout@master
     - name: Install dependencies
       run: pip install requests
-    - name: get url
+    - name: get date
       env: 
         DOCKERTOKEN: ${{ secrets.docker_token }}
       run: python koishi.py > docker/koishi
     - name: Commit
       run: |
-        git config --global user.email zglinus@outlook.com
+        git config --global user.email 2095809794@qq.com
         git config --global user.name zglinus
         git add .
         git commit -m "update" -a
